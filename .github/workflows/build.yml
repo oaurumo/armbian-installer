@@ -12,6 +12,7 @@ on:
           - "standard"
           - "debian12_minimal"
           - "ubuntu24_minimal"
+          - "ubuntu22_minimal"
           - "homeassistant_debian12_minimal"
 
 jobs:
@@ -35,6 +36,9 @@ jobs:
 
           if [ "$VERSION_TYPE" = "ubuntu24_minimal" ]; then
             mv output/armbian-installer-x86_64-standard.iso output/armbian-installer-x86_64-ubuntu24_minimal.iso
+          fi
+          if [ "$VERSION_TYPE" = "ubuntu22_minimal" ]; then
+            mv output/armbian-installer-x86_64-standard.iso output/armbian-installer-x86_64-ubuntu22_minimal.iso
           fi
 
           if [ "$VERSION_TYPE" = "homeassistant_debian12_minimal" ]; then
